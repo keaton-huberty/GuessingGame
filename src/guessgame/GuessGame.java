@@ -8,15 +8,22 @@ public class GuessGame{
     int guess;
     Random rand = new Random();
     int randomNumber = rand.nextInt(20) + 0;
-
+    boolean win = false;
+    
     System.out.print("I'm thinking of a number between 0-20. What is the number? ");
+    
+    while (win == false) {
     guess = userInput.nextInt();
     
     if (guess == randomNumber) {
-        System.out.println("You got it!");
+        win = true;
     }
     else {
-        System.out.println("Nop. The number is " + randomNumber + ".");
+        System.out.print("Nop. Try again: ");
     }
+    }
+    
+    System.out.println("You got it!");
+    
     }
 }
