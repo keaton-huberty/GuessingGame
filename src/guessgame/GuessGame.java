@@ -18,12 +18,13 @@ public class GuessGame{
     if (guess == randomNumber) {
         win = true;
     }
-    else {
-        System.out.print("Nop. Try again: ");
+    else if (guess > randomNumber) {
+        System.out.print("Nop. Too high. Try again:");
+    }
+    else if (guess < randomNumber) {
+        System.out.print("Nop. Too low. Try again:");
     }
     }
-    
     System.out.println("You got it!");
-    
     }
 }
