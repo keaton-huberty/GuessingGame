@@ -9,6 +9,7 @@ public class GuessGame{
     Random rand = new Random();
     int randomNumber = rand.nextInt(20) + 0;
     boolean win = false;
+    int guessAmount = 1;
     
     System.out.print("I'm thinking of a number between 0-20. What is the number? ");
     
@@ -20,11 +21,13 @@ public class GuessGame{
     }
     else if (guess > randomNumber) {
         System.out.print("Nop. Too high. Try again:");
+        guessAmount++;
     }
     else if (guess < randomNumber) {
         System.out.print("Nop. Too low. Try again:");
+        guessAmount++;
     }
     }
-    System.out.println("You got it!");
+    System.out.println("You got it in " + guessAmount + " tries!");
     }
 }
